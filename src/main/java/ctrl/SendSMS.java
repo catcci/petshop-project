@@ -28,13 +28,13 @@ public class SendSMS {
 	}
 	
 	public void certifiedPhoneNumber(String phoneNumber, String numStr) {
-		String api_key="NCSUZWO23FKPMW9G";
-		String api_secret="4W8VXYLJEGP7VVSQUCZ2AIMJZGNH3JAS";
+		String api_key="";	//발신 키
+		String api_secret="";	//시크릿 키넘버
 		Message coolsms = new Message(api_key, api_secret);
 		
 		HashMap<String, String> params = new HashMap<String, String>();
 	    params.put("to", phoneNumber); // 수신번호
-	    params.put("from", "01032357350"); // 발신번호
+	    params.put("from", ""); // 발신번호
 	    params.put("type", "SMS"); // Message type ( SMS, LMS, MMS, ATA )
 	    params.put("text", "펫키지 휴대폰인증 메시지 : 인증번호는 [" + numStr+"] 입니다."); // 문자내용    
 	    params.put("app_version", "JAVA SDK v1.2"); // application name and version
